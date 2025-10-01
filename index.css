@@ -136,19 +136,19 @@ body {
     margin-bottom: 3mm;
 }
 
-.education-grid, .projects-grid {
+.education-grid, .projects-grid, .experience-grid {
     display: flex;
     flex-direction: column;
     gap: 3mm;
     position: relative;
 }
 
-.education-item, .project-card {
+.education-item, .project-card, .experience-item {
     position: relative;
     padding-left: 5mm;
 }
 
-.education-item::before, .project-card::before {
+.education-item::before, .project-card::before, .experience-item::before {
     content: '';
     position: absolute;
     left: 1.5mm;
@@ -159,7 +159,7 @@ body {
     border-radius: 50%;
 }
 
-.education-grid::before, .projects-grid::before {
+.education-grid::before, .projects-grid::before, .experience-grid::before {
     content: '';
     position: absolute;
     left: 2.25mm;
@@ -169,14 +169,14 @@ body {
     background: #C8102E;
 }
 
-.education-item h3, .project-card h3 {
+.education-item h3, .project-card h3, .experience-item h3 {
     font-size: 4mm;
     font-weight: 600;
     margin-bottom: 1mm;
     text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2);
 }
 
-.education-item p, .project-card p {
+.education-item p, .project-card p, .experience-item p {
     font-size: 3mm;
     margin-bottom: 1mm;
 }
@@ -186,6 +186,18 @@ body {
     color: #f0f0f0;
 }
 
+.skills-category {
+    margin-bottom: 4mm;
+}
+
+.skills-category h3 {
+    font-size: 4mm;
+    font-weight: 600;
+    margin-bottom: 2mm;
+    color: #fff;
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2);
+}
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -193,16 +205,47 @@ body {
 }
 
 .skill-item {
-    font-size: 3.5mm;
     background: rgba(255, 255, 255, 0.9);
     color: #003366;
-    padding: 1.5mm 2mm;
+    padding: 2mm 2.5mm;
     border-radius: 2mm;
     flex: 1 1 calc(33.33% - 2mm);
     text-align: center;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1mm;
 }
+
+.skill-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1mm;
+    font-size: 3.5mm;
+}
+
+.skill-main i {
+    font-size: 4mm; /* Adjusted font size for better alignment */
+}
+
+.skill-sub {
+    font-size: 2.5mm;
+    color: #002244;
+    margin-top: 0.5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5mm;
+}
+
+.skill-sub i {
+    font-size: 3mm;
+}
+
+
 
 .tech-stack {
     display: flex;
@@ -218,6 +261,24 @@ body {
     border-radius: 1mm;
     backdrop-filter: blur(5px);
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.project-links {
+    margin-top: 1mm;
+}
+
+.project-links a {
+    color: #fff;
+    font-size: 3mm;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1mm;
+    transition: color 0.3s;
+}
+
+.project-links a:hover {
+    color: #f0f0f0;
 }
 
 @media print {
